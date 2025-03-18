@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <style>
+     section{
+  font-family: "Roboto",sans-serif;
+  width: 75%;
+  margin: auto;
+}
+section > h2{
+  margin: 2rem 0;
+  text-align: center;
+  letter-spacing: 3px;
+}
+.accordion{
+  background-color:#eeeeea;
+  color: rgba(0,0,0,0.8);
+  cursor: pointer;
+  border: transparent;
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 2rem 2.5rem;
+  outline: none;
+  transition: .4s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.accordion i{
+  font-size: 1.6rem;
+}
+.active,.accordion:hover{
+  background-color: gainsboro;
+}
+.panel{
+  padding: 0 2rem 2.5rem 2rem;
+  overflow: hidden;
+  background-color: gainsboro;
+  display: none;
+  max-height: 0; 
+  transition: max-height 0.4s ease; 
+}
+.panel a{
+  text-decoration: none;
+  color: blue;
+}
+.faq.active .panel {
+  max-height: 200px; 
+}
+.faq{
+  border: 1px solid rgba(0,0,0,0.2);
+  margin: 15px 0;
+}
+.faq.active{
+  border: none;
+}
+  </style>
+</head>
+<body>
+  <section id="faq">
+    <h2>Web-Tech</h2>
+    <div class="faq active">
+      <button class="accordion">
+        UNIT 01:
+        <i class='bx bxs-chevron-down'></i>
+      </button>
+      <div class="panel">
+        <a href="https://drive.google.com/file/d/1oMzRYRU_8RH8g9Vcfj0i4-7Nknxd_xbc/view?usp=sharing"> UNIT01</a>
+      </div>
+    </div>
+
+    <div class="faq active">
+      <button class="accordion">
+        UNIT 02:
+        <i class='bx bxs-chevron-down'></i>
+      </button>
+      <div class="panel">
+        <a href="https://drive.google.com/file/d/1oMzRYRU_8RH8g9Vcfj0i4-7Nknxd_xbc/view?usp=sharing"> UNIT02</a>
+      </div>
+    </div>
+
+    <div class="faq active">
+      <button class="accordion">
+        UNIT 03:
+        <i class='bx bxs-chevron-down'></i>
+      </button>
+      <div class="panel">
+        <a href="/error-page.html"> UNIT03</a>
+      </div>
+    </div>
+
+    <div class="faq active">
+      <button class="accordion">
+        UNIT 04:
+        <i class='bx bxs-chevron-down'></i>
+      </button>
+      <div class="panel">
+        <a href="/error-page.html"> UNIT04</a>
+      </div>
+    </div>
+
+    <div class="faq active">
+      <button class="accordion">
+        UNIT 05:
+        <i class='bx bxs-chevron-down'></i>
+      </button>
+      <div class="panel">
+        <a href="/error-page.html"> UNIT05</a>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    //faq
+    var acc = document.getElementsByClassName("accordion");
+var i;
+for (i = 0; i < acc.length; i++) {
+  // Check if it's the third accordion item
+  if (i === 2) {
+    // Add a class to the third accordion item
+    acc[i].classList.add("third-accordion");
+  }
+
+  acc[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+    this.parentElement.classList.toggle("active");
+
+    var panel = this.nextElementSibling;
+
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+  </script>
+</body>
+</html>

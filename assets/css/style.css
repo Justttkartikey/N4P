@@ -1,0 +1,657 @@
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+/* navbar starts */
+#myBtn {
+  height: 48px;
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: blue; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 10px; /* Some padding */
+  border-radius: 50%; /* Rounded corners */
+  font-size: 28px; /* Increase font size */
+  transition: all 0.2s ease-in;
+}
+
+#myBtn:hover {
+  background-color: #fa884a; /* Add a dark-grey background on hover */
+}
+nav{
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: black;
+}
+.wlcm{
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 5px;
+  font-family: "Monda";
+}
+.wlcm {
+  animation: color-change 6s infinite;
+}
+
+@keyframes color-change {
+  0% {
+    color: #f23895; /* pink */
+  }
+  20% {
+    color: #3efe3e; /* green */
+  }
+  40% {
+    color: #00c4ff; /* blue */
+  }
+  60% {
+    color: #FF9900; /* orange */
+  }
+  80% {
+    color: #fa0000; /* purple */
+  }
+  100% {
+    color: #24c879; /* pink */
+  }
+}
+/* logo-line starts */
+header{
+  position: fixed;
+  top: 10;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 5px 20px rgba(0,0, 0, 0.9);
+  padding: 0px 4%;
+  display: flex;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+  filter: blur(0px);
+  transition: all 0.3s ease-in-out;
+}
+
+header .logo-line ul{
+  list-style: none;
+}
+header .logo-line ul li{
+  position: relative;
+  float: left;
+}
+header .logo-line ul li a{
+  font-size: 16px;
+  padding: 3px;
+  margin-right: 25px;
+  color: #000;
+  display: block;
+}
+header .logo-line ul li a:hover{
+  /* background-color: rgba(0, 0, 255, 0.502); */
+  color: #000;
+}
+header .logo-line ul li ul{
+  position: absolute;
+  left: 0;
+  width: 200px;
+  background: gainsboro;
+  display: none;
+}
+header .logo-line ul li ul li{
+  width: 100%;
+  margin-bottom: 2px;
+  color: #000;
+  position: relative;
+}
+header .logo-line ul li ul li:hover{
+  background-color: rgba(0, 0, 255, 0.318);
+  color: #fff;
+}
+header .logo-line ul li ul li ul{
+  left: 200px;
+  top: 0;
+}
+header .logo-line ul li:hover >ul{
+  display: initial;
+}
+.logo-line{
+  display: flex;
+  align-items: center;
+}
+.logo-line img{
+  height: 75px;
+}
+.logo-line a{
+  margin-top: 10px;
+  text-decoration: none;
+  color: #000;
+  font-family: "Monda";
+}
+.logo-line a:hover{
+  color: white;
+  border-radius: 25px;
+}
+/* first-page starts */
+.first{
+  height: 370px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.first .background{
+  width: 100%;
+  position: absolute;
+  height: 320px;
+  opacity: 0.3;
+}
+.poornima{
+  width: 600px;
+  border-radius: 15px;
+  margin: 0 20px;
+  z-index: 10;
+}
+.text{
+  z-index: 12;
+  margin-bottom: 80px;
+  margin-left: 20px;
+  margin-right: 30px;
+}
+.text h2{
+  font-size: 45px;
+  margin-bottom: 15px;
+  font-family: "Ubuntu";
+  transition: all 0.2s ease;
+}
+.text h2:hover{
+  color: #fa884a;
+  letter-spacing: 0.4px;
+  text-decoration: underline;
+  text-decoration-color: #fa884a;
+}
+.text p{
+  font-size: 20px;
+  font-family: "Roboto",sans-serif;
+  letter-spacing: 1px;
+  line-height: 35px;
+}
+/* second-page starts */
+.second{
+  height: 340px;
+  margin-top: 20px;
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: end;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.avtar{
+  height: 300px;
+  display: flex;
+  justify-content: end;
+  margin-right: 100px;
+  transition: all 0.3s ease-in-out;
+}
+.avtar:hover{
+  height: 310px;
+}
+.text2{
+  z-index: 12;
+  margin-bottom: 10px;
+  margin-left: 100px;
+  margin-right: 30px;
+}
+.text2 h2{
+  font-size: 45px;
+  margin-bottom: 15px;
+  font-family: "Montserrat Alternates";
+}
+.text2 h2 span{
+  color: #000;
+  transition: 0.2s all ease-in-out;
+}
+.text2 h2 span:hover{
+  color: #fa884a;
+  letter-spacing: 0.4px;
+  text-decoration: underline;
+  text-decoration-color: #fa884a;
+}
+
+.text2 p{
+  font-size: 20px;
+  font-family: "Roboto",sans-serif;
+  letter-spacing: 1px;
+  line-height: 35px;
+}
+/* testimonials page starts */
+.testimonials{
+  margin-top: 60px;
+  font-family: "Monda";
+  /* letter-spacing: 1px; */
+}
+.testimonials h1{
+  font-size: 50px;
+  /* margin-bottom: 60px; */
+  text-align: center;
+  font-family: "Style Script";
+  transition: all 0.2s ease-in-out;
+}
+.testimonials h1:hover{
+  letter-spacing: 1.2px;
+  color: #fa884a;
+  text-decoration: underline;
+  text-decoration-color: #fa884a;
+}
+.wrapper{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+  height: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+}
+.card{
+  width: 80px;
+  border-radius: .75rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 2rem;
+  margin: 0 10px;
+  display: flex;
+  align-items: flex-end;
+  transition: .6s cubic-bezier(.28,-0.03,0,.99);
+  box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+.card > .row{
+  color: #fff;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.card > .row > .icon{
+  background: #223;
+  color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+}
+.card > .row > .description{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100px;
+  width: 520px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition-delay: .3s;
+  transition: all .3s ease;
+}
+.description p{
+  color: #000;
+  border-bottom-right-radius: 20px;
+  font-weight: 900;
+  padding-top: 5px;
+  background-color: rgba(220, 220, 220, 0.643);
+  width: 80%;
+  padding-bottom: 5px;
+}
+.description h4{
+  text-transform: uppercase;
+  border-top-left-radius: 20px;
+  color: #000;
+  padding-top: 5px;
+  background-color: rgba(220, 220, 220, 0.643);
+  width: 80%;
+}
+input{
+  display: none;
+}
+input:checked + label{
+  width: 600px;
+}
+input:checked + label .description{
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.card[for="c1"]{
+  background-image: url('/assets/css/images/testimonials/vaisnavi.jpg');
+}
+.card[for="c2"]{
+  background-image: url('/assets/css/images/testimonials/lavanshu.jpg');
+}
+.card[for="c3"]{
+  background-image: url('/assets/css/images/testimonials/vishnu.jpg');
+}
+.card[for="c4"]{
+  background-image: url('/assets/css/images/testimonials/pranjal-1.jpg');
+}
+.card[for="c5"]{
+  background-image: url('/assets/css/images/testimonials/anirudh.jpg');
+}
+/* our-services starts */
+.our-services h1{
+  font-size: 50px;
+  font-family: "Style Script";
+  text-align: center;
+  margin-top: 90px;
+  margin-bottom: 30px;
+  transition: all 0.2s ease-in-out;
+}
+.our-services h1:hover{
+  letter-spacing: 1.3px;
+  color: #fa884a;
+  text-decoration: underline;
+  text-decoration-color: #fa884a;
+}
+.cards-container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap
+}
+.cards1,.cards2,.cards3{
+  height: 210px;
+  width: 300px;
+  position: relative;
+  background-color: #f1f7f5a0;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+.cards1:hover,.cards2:hover,.cards3:hover{
+  border: 1px solid #000;
+  background-color: #cbeee248;
+}
+.cards1::after,.cards2::after,.cards3::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+}
+.cards1::after,.cards2::after,.cards3::after{
+  background-image: url("images/N4P.png");
+}
+.cards1:hover::after,.cards2:hover::after,.cards3:hover::after{
+  opacity: 0.5;
+}
+.cards1 .texts{
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-right: 20px;
+  margin-left: 20px; 
+}
+.cards2 .texts{
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.cards3 .texts{
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.cards1 .texts h2{
+  margin-bottom: 6px;
+  font-family: "Monda";
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.cards2 .texts h2{
+  margin-bottom: 6px;
+  font-family: "Monda";
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.cards3 .texts h2{
+  margin-bottom: 6px;
+  font-family: "Monda";
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.cards3 .texts p{
+  font-family: "Montserrat Alternates";
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.cards1 .texts p{
+  font-family: "Montserrat Alternates";
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.cards2 .texts p{
+  font-family: "Montserrat Alternates";
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+/* FAQs starts */
+section{
+  font-family: "Roboto",sans-serif;
+  width: 75%;
+  margin: auto;
+}
+section > h2{
+  margin: 1.5rem 0;
+  text-align: center;
+  letter-spacing: 3px;
+}
+.accordion{
+  background-color:#eeeeea;
+  color: rgba(0,0,0,0.8);
+  cursor: pointer;
+  border: transparent;
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 2rem 2.5rem;
+  outline: none;
+  transition: .4s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.accordion i{
+  font-size: 1.6rem;
+}
+.active,.accordion:hover{
+  background-color: gainsboro;
+}
+.panel{
+  padding: 0 2rem 2.5rem 2rem;
+  background-color: #eeeeea;
+  overflow: hidden;
+  background-color: gainsboro;
+  display: none;
+}
+.panel p{
+  color: rgba(0, 0, 0,0.7);
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+.faq{
+  border: 1px solid rgba(0,0,0,0.2);
+  margin: 10px 0;
+}
+
+.faq.active{
+  border: none;
+}
+
+/* footer starts */
+footer{
+  margin-top: 80px;
+  height: 400px;
+  background-color: rgba(213, 233, 226, 0.242);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .logo{
+  height: 130px;
+}
+.first-column .heading{
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+.first-column .sub-heading{
+  font-size: 23px;
+  margin-bottom: 5px;
+}
+.first-column a{
+  color: #000;
+  text-decoration: none;
+}
+.second-column .heading{
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+.second-column .sub-heading{
+  font-size: 23px;
+  margin-bottom: 5px;
+}
+.second-column a{
+  color: #000;
+  text-decoration: none;
+}
+.third-column .heading{
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+.third-column .sub-heading{
+  font-size: 23px;
+  margin-bottom: 5px;
+}
+.third-column .sub-heading:hover{
+  text-decoration: underline;
+  text-decoration-color: #000;
+}
+.third-column a{
+  color: #000;
+  text-decoration: none;
+}
+.fourth-column .heading{
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+.fourth-column form{
+  width: 100%;
+  position: relative;
+}
+.fourth-column form input{
+  width: 100%;
+  border: none;
+  padding: 13px;
+  display: block;
+  border-radius: 80px;
+  background-color: #fff;
+  font-weight: 400;
+  font-size: 17px;
+}
+.fourth-column form button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  width: 45px;
+  background-color: #fa884a;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.fourth-column form button i{
+  font-size: 26px;
+}
+.fourth-column .icons{
+  margin-top: 10px;
+  font-size: 35px;
+  transition: all 0.2s ease-in-out;
+}
+.fourth-column .icons i:hover{
+  color: #fa884a;
+}
+.heading{
+  font-family: "Montserrat Alternates";
+  transition: all 0.2s ease-in-out;
+  color: #000000bb;
+}
+.heading:hover{
+  color: #000;
+  cursor: none;
+}
+.sub-heading{
+  font-family: "Roboto";
+  color: #000000c9;
+  transition: all 0.2s ease-in-out;
+}
+.sub-heading:hover{
+  color: #000;
+  cursor: pointer;
+  letter-spacing: 0.1px;
+  font-weight: 500;
+}
+
+.copyright{
+  background-color: #f1f7f5;
+  border-top: 1px solid rgba(95, 158, 160, 0.348);
+  text-align: center;
+  padding: 30px;
+  font-family: "Roboto";
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #000000c9;
+  transition: all 0.3s ease-in-out;
+}
+.copyright:hover{
+  color: #000;
+}
+.logo-line,.first,.second,.testimonials,.our-services,.faq,footer{
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}

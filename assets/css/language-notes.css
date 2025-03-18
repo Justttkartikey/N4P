@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #eeeeea;
+}
+h2{
+  color: #000;
+  font-size: 45px;
+  margin-top: 40px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: monospace;
+  text-align: center;
+}
+.by{
+  text-align: center;
+  font-size: 20px;
+}
+.choose{
+  color: #000;
+  font-size: 25px;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+.cards1{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #eeeeea;
+}
+.cards2{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #eeeeea;
+}
+.card1,.card2,.card3,.card4,.card5,.card6,.card7,.card8,.card9{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 60px; 
+  width: 290px;
+  color: #000;
+  font-size: 20px;
+  font-family: "Bebas neue";
+  letter-spacing: 3px;
+  border: 1.5px solid #000;
+  background-color: #eeeeea;
+  padding: 20px 0 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.card1:hover, .card2:hover, .card3:hover, .card4:hover, .card5:hover, .card6:hover, .card7:hover{
+  color: orangered;
+  border: 1px solid orangered;
+}
+a{
+  text-decoration: none;
+}
+.card1,.card2,.card3,.card4,.card5,.card6,.card7,.card8,.card9 p{
+  font-family: "Moderustic",monospace;
+  letter-spacing: 3px;
+}
+h2,.by,.choose,.cards1,.cards2{
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
